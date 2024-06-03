@@ -1,0 +1,57 @@
+<html>
+
+
+<body>
+    <label> 1st Number </label><input type="text" id="num1">
+    <label> 2nd Number </label><input type="text" id="num2">
+
+    <input type="button" onclick="enume();" value="Enum">
+    <input type="button" onclick="genderCheck();" value="Gender Check ">
+    <input type="button" onclick="abc();" value="Print">
+
+
+</body>
+
+<script>
+       function abc() {
+            // Define the enum
+            var ColorsEnum = { WHITE: '#00000', GRAY: '#453443', BLACK: '#887477' }
+            Object.freeze(ColorsEnum);
+            // Define the variable and assign a value
+            var color = ColorsEnum.WHITE;
+            console.log(color);
+        }
+
+
+    function genderCheck() {
+        const gender = Object.freeze({ Male: 'M', Female: 'F', Other: 'O' });
+        console.log(gender.Female);
+    }
+
+    const TestEnum = Object.freeze({
+        One: 1,
+        Two: 2,
+        Three: 3
+    });
+    var TestEnum1 = { One: 1, Two: 2, Three: 3 }
+    Object.freeze(TestEnum);
+    function enume() {
+        var x = TestEnum.Two;
+        // Prints a value according to the variable's enum value
+        switch (x) {
+            case TestEnum.One:
+                console.log("111");
+                break;
+            case TestEnum.Two:
+                console.log("222");
+
+        }
+
+
+     
+    }
+
+
+</script>
+
+</html>

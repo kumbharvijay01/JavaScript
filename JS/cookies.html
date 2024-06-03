@@ -1,0 +1,81 @@
+<html>
+
+
+<body>
+
+
+    <input type="button" onclick="addition();" value="Addition">
+    <input type="button" onclick="clearStorage();" value="Clear">
+</body>
+
+<script>
+    function addition() {
+
+        localStorage.setItem('name', "John Smith");
+        localStorage.setItem('Address', 'Pune');
+        console.log(localStorage.getItem('name')); // "John Smith"
+
+    }
+    function clearStorage() {
+        localStorage.clear();
+        var personArr = [
+            {
+                "personId": 123,
+                "name": "Jhon",
+                "city": "Melbourne",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 124,
+                "name": "Amelia",
+                "city": "Sydney",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 125,
+                "name": "Emily",
+                "city": "Perth",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 126,
+                "name": "Abraham",
+                "city": "Perth",
+                "phoneNo": "1234567890"
+            }
+        ];
+        console.log(JSON.stringify(personArr));
+    }
+    function aj() {
+        const requestData = {
+            method: 'getUsers'
+        };
+        var obj={"name":"test","salary":"123","age":"23"};
+        const usersPromise = fetch('https://dummy.restapiexample.com/api/v1/create', {
+            
+            method: 'POST',
+            body: JSON.stringify(obj)
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error("Got non-2XX response from API server.");
+            }
+            return response.json();
+        }).then(responseData => {
+            return responseData.users;
+        });
+        usersPromise.then(users => {
+            console.log("Known users: ", users);
+        }, error => {
+            console.error("Failed to fetch users due to error: ", error);
+        });
+    }
+</script>
+<body>
+    <form method="get">
+        <input type="text" id="name">
+        <input type="button" value="Ajax Call" onclick="aj();">    
+    </form>
+    
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<html>
+
+
+<body>
+
+
+    <input type="button" onclick="check();" value="Addition">
+</body>
+
+<script>
+    function check() {
+        test();
+        var personArr = [
+            {
+                "personId": 123,
+                "name": "Jhon",
+                "city": "Melbourne",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 124,
+                "name": "Amelia",
+                "city": "Sydney",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 125,
+                "name": "Emily",
+                "city": "Perth",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 126,
+                "name": "Abraham",
+                "city": "Perth",
+                "phoneNo": "1234567890"
+            }
+        ];
+        // for (var x = 0; x < personArr.length; x++) {
+        //     alert(personArr[x].name);
+        //     alert(personArr[x].personId);
+        // }
+        var x=10;
+        var y=20;
+        var z=parseInt(x)+parseInt(y);
+        // console.assert(40 === z);
+        console.table(personArr, ['name', 'personId', 'city', 'phoneNo']);
+
+        console.log(typeof 2);
+        
+        console.log(typeof true);
+
+
+        // console.clear();
+    }
+    function test() {
+        alert('Before Calling')
+
+    }
+
+</script>
+
+</html>

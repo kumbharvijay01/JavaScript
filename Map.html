@@ -1,0 +1,101 @@
+<html>
+
+
+<body>
+    <label> 1st Number </label><input type="text" id="num1">
+    <label> 2nd Number </label><input type="text" id="num2">
+
+    <input type="button" onclick="mapExample();" value="MaP Example">
+    <input type="button" onclick="timstampExample();" value="TimeStamp Example">
+
+</body>
+
+<script>
+
+    function timstampExample() {
+        console.log(Math.floor((new Date().getTime()) / 100));
+        var arr=["a", "b", "c"];
+        console.log(arr);
+        var abc=arr.join('*');
+        console.log(abc);
+        var x='X';
+        console.log(typeof(x));
+        // console.log(delete(x));
+        // console.log(x);
+
+        const p={
+                "personId": 123,
+                "name": "Jhon",
+                "city": "Melbourne",
+                "phoneNo": "1234567890"
+            };
+            console.log(delete(p.city));
+            console.log(p);
+            console.log(typeof(p));
+            var a=Number('0');
+            console.log('after conversion from string to number ',typeof(a));
+
+            var flag=Boolean('asd');
+            console.log(flag);
+            
+            if(flag)
+            {
+                console.log('Boolean conversion Success');
+            }
+    }
+    
+
+    function mapExample() {
+        t = performance.now();
+        var personArr = [
+            {
+                "personId": 123,
+                "name": "Jhon",
+                "city": "Melbourne",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 124,
+                "name": "Amelia",
+                "city": "Sydney",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 125,
+                "name": "Emily",
+                "city": "Perth",
+                "phoneNo": "1234567890"
+            },
+            {
+                "personId": 126,
+                "name": "Abraham",
+                "city": "Perth",
+                "phoneNo": "1234567890"
+            }
+        ];
+        const map = new Map();
+        map.set(1, 'One');
+        map.set(2, 'Two');
+        map.set(3, personArr);
+        console.log(map);
+        // map.clear();
+        // console.log(map);
+        map.delete(3);
+        console.log(map);
+        console.log(map.has(2));
+
+        //  iterating Keys
+        console.log('iterating Keys');
+        for (const key of map.keys()) {
+            console.log(key); // logs 1 and 3
+        }
+        //  
+        console.log('iterating Values');
+        for (const value of map.values()) {
+            console.log(value);
+        }
+
+    }
+</script>
+
+</html>

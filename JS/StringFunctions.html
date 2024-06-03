@@ -1,0 +1,67 @@
+<html>
+
+
+<body>
+    <input type="text" id="number1" name="fname">
+
+    <input type="text" id="number1" name="fname">
+    <input type="button" onclick="register();" value="Submit">
+</body>
+
+<script>
+    function test(x) {
+
+        console.info('X VAlue is %s  ', x);
+        var num = parseInt(x);
+        var output = num / 10;
+        alert(output);
+
+    }
+    function register() {
+        var s = document.getElementsByName('fname')[0].value;
+        var s1 = document.getElementsByName('fname')[1].value;
+        var s = document.getElementById('number1').value;
+        var s = "0123456789abcdefg";
+        s.slice(0, 5); // "01234"
+        s.slice(5, 6); // "5"
+        //console.log(s.trimEnd());
+        console.log('Before Trim ', s.length);
+        var x = s.trim();
+        console.log('After trim function', x.length);
+        var st = "one, two, three, four, five"
+        console.log(st.split(", ")); // ["one", "two", "three", "four", "five"]
+        console.log(st.split(", ").join("--"));
+
+        // base 10 Number
+        var b10 = 12;
+        // base 16 String representation
+        var b16 = b10.toString(16); // "c"
+        console.log(b16);
+        // To check the String present in string
+        var string = "Hello, World!";
+        console.log(string.includes("Hello")); // true
+        console.log(string.includes("H")); // false
+
+
+        //  Replace Function :
+
+        var name='Good Morning';
+        console.log(name.replace('Good','Bye'));
+        var replacedName=name.replace('Good','Bye');
+        console.log(replacedName);
+
+        var c='Chaitanya';
+        console.log(c.indexOf('a'));
+        //  To Upper
+        console.log(c.toUpperCase());
+
+        // To lower
+        console.log(c.toLowerCase());
+
+
+
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+
+<body>
+    <label> 1st Number </label><input type="text" id="num1">
+    <label> 2nd Number </label><input type="text" id="num2">
+
+    <input type="button" onclick="addition();" value="Addition">
+</body>
+
+<script>
+    function addition() {
+
+        console.time('response in');
+        alert('Click to continue');
+        console.timeEnd('response in');
+        // alert('One more time');
+        // console.timeEnd('response in');
+        var date1 = new Date();
+        var date2 = new Date(date1.valueOf() + 10);
+        console.log(date1.valueOf() === date2.valueOf());
+    }
+
+</script>
+
+</html>

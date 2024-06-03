@@ -1,0 +1,80 @@
+<html>
+
+
+<body>
+    <input type="text" id="number1" name="fname">
+
+    <input type="radio" id="gender" value="M" name="gender"> Male
+    <input type="radio" id="gender" value="F" name="gender"> Female
+
+
+    <input type="button" onclick="register();" value="Submit">
+</body>
+
+<script>
+
+    function register() {
+        var d = new Date();
+        console.log(d);
+        var one = new Date(2024, 2, 1);
+        console.log(one);
+        var x = one.toString();
+        console.log(x);
+
+        var date1 = new Date();
+        date1.toTimeString();
+        console.log(date1.toTimeString());
+
+
+        var date1 = new Date();
+        console.log(date1.toISOString());
+        console.log(date1.toJSON());
+
+        var date1 = new Date();
+        var date2 = new Date(date1.valueOf() + 5000);
+        var dateDiff = date1.valueOf() - date2.valueOf();
+        var dateDiffInYears = dateDiff / 1000 / 60 / 60 / 24 / 365; //convert milliseconds into years
+        console.log("Date difference in years : " + dateDiffInYears);
+
+        var value = parseInt(document.getElementById('number1').value);
+        switch (value) {
+            case 1:
+                console.log('I will always run');
+                break;
+            case 2:
+                console.log('I will never run');
+                break;
+            default:
+                console.log('Out of Selection');
+        }
+
+        var arr = [1, 2, 3];
+        var arr2 = [1, 2, 3];
+        console.log(arr);
+        arr.push(4);
+        console.log(arr);
+
+        // var arr = [4, 2, 1, 0, 9]
+        // console.log(arr.sort());
+        // for (var a = 0; a < arr.length; a++) {
+        //     console.log(arr[a]);
+        // }
+
+        // var key = 0;
+        // while (value = arr[key++]) {
+        //     console.log(value);
+        // }
+        for (i in arr) {
+    console.log(arr[i]);
+}
+console.log(arr.reverse());
+console.log(arr.concat(arr2));
+
+    }
+
+
+
+
+</script>
+
+</html>

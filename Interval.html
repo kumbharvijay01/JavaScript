@@ -1,0 +1,36 @@
+<html>
+
+
+<body onload="waitFunc();">
+    <label> 1st Number </label><input type="text" id="num1">
+    <label> 2nd Number </label><input type="text" id="num2">
+
+    <input type="button" onclick="repeatingFunc();" value="Start">
+    <input type="button" onclick="rp();" value="Stop">
+</body>
+
+<script>
+
+    function repeatingFunc() {
+        console.log(" Button Click Event : It's been 5 seconds. Execute the function again.");
+        setTimeout(repeatingFunc, 5000);
+    }
+    setTimeout(repeatingFunc, 5000);
+
+    function waitFunc() {
+        console.log("from Onload Event It's been 5 seconds. Execute the function again.");
+        window.setInterval(waitFunc, 5000);
+    }
+
+    function rp(){
+        console.log("Vijay".replace(/[V-i]+/, "A"));
+    }
+    
+
+    
+
+
+
+</script>
+
+</html>

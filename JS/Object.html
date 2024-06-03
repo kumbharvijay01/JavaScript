@@ -1,0 +1,33 @@
+<html>
+
+
+<body>
+
+    <input type="button" onclick="check();" value="Addition">
+</body>
+
+<script>
+    function check() {
+
+        var existing = { a: 1, b: 2, c: 3 };
+        var clone = {};
+        for (var prop in existing) {
+            if (existing.hasOwnProperty(prop)) {
+                clone[prop] = existing[prop];
+            }
+        }
+        console.log(clone);
+
+        //Stringnify
+        var cp = JSON.stringify(clone);
+        console.log(cp);
+
+        //  Printing Keys
+        var obj = { 0: 'a', 1: 'b', 2: 'c' };
+        Object.keys(obj).map(function (key) {
+            console.log(key);
+        });
+    }
+</script>
+
+</html>

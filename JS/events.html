@@ -1,0 +1,25 @@
+<html>
+
+
+<body>
+
+    <input type="text" id="name">
+    <input type="button" onclick="check();" value="Addition">
+</body>
+
+<script>
+
+    function check() {
+        var regex = /[a-z,A-Z,0-9]+/;
+        var x = document.getElementById('name').value;
+        if (regex.test(x)) {
+            console.log('Matches')
+        } else {
+            console.log('Not matches');
+        }
+
+    }
+
+</script>
+
+</html>
